@@ -13,12 +13,8 @@ name: nethack
 #     in deploy_infra.yml.
 
 on:
-  pull_request:
-    paths:
-      - Dockerfile
-      - .github/workflows/nethack.yml
-  schedule:
-    - cron: "0 6 * * 1" # Mondays 06:00 UTC
+  push:
+    branches: [main]
   workflow_dispatch:
     inputs:
       run_deploy_seed:

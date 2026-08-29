@@ -13,12 +13,8 @@ name: dcss
 #     deployment is rolled out and the door is enabled on service-ssh.
 
 on:
-  pull_request:
-    paths:
-      - Dockerfile
-      - .github/workflows/dcss.yml
-  schedule:
-    - cron: "0 6 * * 3" # Wednesdays 06:00 UTC (staggered a day after dopewars')
+  push:
+    branches: [main]
   workflow_dispatch:
     inputs:
       run_verify_deployed:

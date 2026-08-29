@@ -1,6 +1,8 @@
 name: terraform_apply
 
 on:
+  push:
+    branches: [main]
   workflow_call:
     inputs:
       ssh_image_tag:

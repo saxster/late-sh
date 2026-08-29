@@ -15,12 +15,8 @@ name: dopewars
 #     state to seed or check.
 
 on:
-  pull_request:
-    paths:
-      - Dockerfile
-      - .github/workflows/dopewars.yml
-  schedule:
-    - cron: "0 6 * * 2" # Tuesdays 06:00 UTC (staggered a day after nethack's)
+  push:
+    branches: [main]
   workflow_dispatch:
     inputs:
       run_verify_deployed:

@@ -14,13 +14,8 @@ name: usurper
 #     deployment is rolled out and the door is enabled on service-ssh.
 
 on:
-  pull_request:
-    paths:
-      - Dockerfile
-      - scripts/usurper_seed_data.py
-      - .github/workflows/usurper.yml
-  schedule:
-    - cron: "0 6 * * 4" # Thursdays 06:00 UTC (staggered a day after dcss')
+  push:
+    branches: [main]
   workflow_dispatch:
     inputs:
       run_verify_deployed:
